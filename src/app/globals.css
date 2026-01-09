@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Theme Variables */
+:root {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+/* Apply Theme Styles */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  font-family: var(--font-sans), sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: #0A1D37;
+    --foreground: #FFFFFF;
+    --card: 0 0% 16%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 16%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 45 65% 55%;
+    --primary-foreground: 0 0% 10%;
+    --secondary: 185 100% 46%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: #B0B0B0;
+    --muted-foreground: 0 0% 70%;
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 96%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 96%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 45 65% 55%;
+    --radius: 0.5rem;
+    --neon-cyan: #00DDEB;
+    --neon-pink: #FF00FF;
+  }
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+  body {
+    @apply antialiased;
+    background: linear-gradient(to bottom, var(--background), #1A1A1A);
+    color: var(--muted);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+
+.glass-effect {
+  @apply bg-background/80 backdrop-blur-lg border border-white/10;
+}
+
+.gradient-border {
+  @apply relative before:absolute before:inset-0 before:rounded-lg before:p-[1px] before:bg-gradient-to-r before:from-primary before:to-secondary before:-z-10;
+}
+
+.hover-glow {
+  @apply transition-all duration-300;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px var(--neon-pink);
+  transform: translateY(-2px);
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/20;
+}
+
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#00DDEB] to-[#FF00FF];
+  }
+
+  .border-glow {
+    box-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-pink);
+  }
+}

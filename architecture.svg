@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <style>
+    .box { fill:#0b1220; stroke:#2b6cb0; stroke-width:2; rx:10; }
+    .sub { fill:#071026; stroke:#2d3748; stroke-width:1; rx:8 }
+    .text { fill:#e6eef8; font-family:Inter, Arial, sans-serif; font-size:14px }
+    .title { fill:#00DDEB; font-size:18px; font-weight:700 }
+    .label { fill:#94a3b8; font-size:12px }
+    .arrow { stroke:#6ee7b7; stroke-width:2; marker-end:url(#arrowhead) }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6ee7b7" />
+    </marker>
+  </defs>
+
+  <!-- Top: Framework -->
+  <g>
+    <rect x="40" y="20" width="420" height="70" class="box" />
+    <text x="60" y="48" class="title">Next.js (App Router)</text>
+    <text x="60" y="70" class="label">Server + Client routes, filesystem routing, SSR/SSG</text>
+  </g>
+
+  <!-- RootLayout -->
+  <g>
+    <rect x="480" y="20" width="300" height="70" class="box" />
+    <text x="500" y="48" class="title">RootLayout</text>
+    <text x="500" y="70" class="label">globals.css, fonts, metadata</text>
+  </g>
+
+  <!-- ClientLayout -->
+  <g>
+    <rect x="820" y="20" width="320" height="70" class="box" />
+    <text x="840" y="48" class="title">ClientLayout</text>
+    <text x="840" y="70" class="label">Lenis (smooth scroll), Navbar</text>
+  </g>
+
+  <!-- Arrow chain -->
+  <line x1="460" y1="55" x2="480" y2="55" class="arrow" />
+  <line x1="780" y1="55" x2="820" y2="55" class="arrow" />
+
+  <!-- Pages area -->
+  <rect x="40" y="120" width="1100" height="470" class="sub" />
+  <text x="60" y="145" class="title">Pages / Routes</text>
+  <text x="60" y="165" class="label">/ (home), /about, /experience, /projects, /skills, /contact</text>
+
+  <!-- Home page box -->
+  <rect x="60" y="185" width="360" height="350" fill="#071026" stroke="#1f6feb" stroke-width="1.5" rx="8" />
+  <text x="80" y="210" class="text" font-weight="700">Home</text>
+
+  <text x="90" y="240" class="text">• HeroSection (Three.js)</text>
+  <text x="90" y="260" class="text">• Skills (Framer Motion)</text>
+  <text x="90" y="280" class="text">• ProjectsSection</text>
+  <text x="90" y="300" class="text">• WavyBackground / visual UI components</text>
+  <text x="90" y="320" class="text">• State: local React useState/useEffect</text>
+
+  <!-- Projects page -->
+  <rect x="440" y="185" width="360" height="220" fill="#071026" stroke="#1f6feb" stroke-width="1.5" rx="8" />
+  <text x="460" y="210" class="text" font-weight="700">Projects</text>
+  <text x="470" y="240" class="text">• ProjectsSection</text>
+  <text x="470" y="260" class="text">• Static data (projects array)</text>
+  <text x="470" y="280" class="text">• Image assets from /public</text>
+
+  <!-- Experience / About / Contact boxes -->
+  <rect x="820" y="185" width="320" height="160" fill="#071026" stroke="#1f6feb" stroke-width="1.5" rx="8" />
+  <text x="840" y="210" class="text" font-weight="700">Other Pages</text>
+  <text x="840" y="235" class="text">• About, Experience, Skills, Contact</text>
+  <text x="840" y="255" class="text">• Reusable components (cards, forms)</text>
+
+  <!-- Arrows showing composition -->
+  <line x1="650" y1="80" x2="650" y2="185" class="arrow" />
+  <line x1="990" y1="90" x2="990" y2="185" class="arrow" />
+
+  <!-- Assets and tools -->
+  <rect x="60" y="540" width="420" height="50" class="sub" rx="6" />
+  <text x="80" y="572" class="label">Public assets: /public/images, /public/assets (icons, screenshots)</text>
+
+  <rect x="540" y="540" width="520" height="50" class="sub" rx="6" />
+  <text x="560" y="572" class="label">Libraries: TailwindCSS, Framer Motion, Three.js, Lenis, Lucide, Heroicons</text>
+
+  <!-- Build & Deploy -->
+  <rect x="60" y="610" width="420" height="60" class="box" rx="8" />
+  <text x="80" y="640" class="title">Build / Deploy</text>
+  <text x="80" y="660" class="label">npm run build → next build; Deploy: Vercel / Static hosting</text>
+
+  <!-- Small legend/notes -->
+  <text x="540" y="640" class="label">Client-side interactions (use client) for animations & 3D; Pages use App Router and React Server Components unless marked "use client".</text>
+
+  <!-- Footer -->
+  <text x="40" y="690" class="label">Generated diagram: project architecture overview • review src/app, src/components, public/</text>
+</svg>
