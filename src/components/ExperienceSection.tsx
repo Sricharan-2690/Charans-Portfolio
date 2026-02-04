@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
+  CpuChipIcon,
   CodeBracketIcon, 
   BeakerIcon, 
   CommandLineIcon, 
@@ -33,6 +34,14 @@ const workExperience: ExperienceItem[] = [
     description: "Working on Full-Stack projects and contributing to innovative solutions.",
     icon: CodeBracketIcon,
     skills: ["React", "Node.js", "MongoDB" , "Express.js","Cloudinary",],
+  },
+  {
+    title: "AI & ML  Intern",
+    company: "IncuX Ai",
+    period: "Feb 2026 - Apr 2026",
+    description: "AIML Intern working on ML models, data pipelines, and AI-powered solutions.",
+    icon: CpuChipIcon,
+    skills: ["Python", "Machine Learning", "Deep Learning" , "Fast Api",],
   },
 ];
 
