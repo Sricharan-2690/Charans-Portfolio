@@ -75,7 +75,7 @@ const certifications: ExperienceItem[] = [
       "Validates proficiency in data science workflows on Oracle Cloud Infrastructure, including data preparation, machine learning model development, analytics, and deploying data-driven solutions.",
     icon: DocumentTextIcon,
     skills: ["Data Science", "Machine Learning", "OCI", "Data Analytics"],
-    link: "/assets/datascience.pdf"
+    link: "/assets/Datascience.pdf"
   },
   {
     title: "OCI 2025 Certified AI Foundations Associate",
